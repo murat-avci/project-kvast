@@ -1,0 +1,45 @@
+.new-product {
+	outline: 2px solid red;
+	padding: 94px 202px 112px;
+}
+
+.new-product__wrapper {
+	margin-top: 101px;
+}
+
+.new-product__card-list {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	row-gap: 50px;
+}
+
+.new-product__card {
+	padding-left: 34px;
+	padding-right: 34px;
+	outline: 2px solid red;
+}
+
+.new-product__card-title {
+	margin-bottom: 41px;
+}
+
+.new-product__pic {
+	padding-top: 5px;
+	outline: 2px solid mediumvioletred;
+}
+
+.new-product__table-wrapper {
+	outline: 2px solid blue;
+}
+
+.new-product__benefit {
+	outline: 2px solid yellowgreen;
+}
+
+.new-product__detail-btn {
+	outline: 2px solid brown;
+}
+
+.new-product__offer-btn {
+	outline: 2px solid purple;
+}

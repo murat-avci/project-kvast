@@ -1,0 +1,10 @@
+.advantages {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	outline: 2px solid goldenrod;
+	justify-content: center;
+}
+
+.advantages__text {
+	margin-top: 35px;
+}

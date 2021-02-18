@@ -1,0 +1,38 @@
+.page-footer__top {
+	padding: 60px 201px 47px 129px;
+}
+
+.page-footer__bottom {
+	padding: 0 103px 43px 91px;
+	display: grid;
+	grid-template-columns: 307px 1fr 298px;
+	align-items: center;
+}
+
+.page-footer__attention {
+	width: 195px;
+}
+
+.page-footer__copyright {
+	display: flex;
+	align-items: center;
+
+	& span {
+		margin-left: 31px;
+	}
+}
+
+.page-footer__copyright-logo {
+
+	& a {
+		display: block;
+		width: 72px;
+		height: 68px;
+		outline: 2px solid red;
+
+		& img {
+			outline: 1px solid blue;
+		}
+	}
+}
+

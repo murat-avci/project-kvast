@@ -1,0 +1,12 @@
+.footer-nav {
+	display: grid;
+	grid-template-columns: 140px 1fr;
+	column-gap: 131px;
+	outline: 2px solid red;
+	align-items: center;
+}
+
+.footer-nav__menu {
+	display: flex;
+	justify-content: space-between;
+}
