@@ -1,3 +1,7 @@
+.page-footer {
+	background-color: $basic-black;
+}
+
 .page-footer__top {
 	padding: 60px 201px 47px 129px;
 }
@@ -10,6 +14,8 @@
 }
 
 .page-footer__attention {
+	@include text(14px,20px,400,$footer-text);
+	font-style: normal;
 	width: 195px;
 }
 
@@ -17,22 +23,39 @@
 	display: flex;
 	align-items: center;
 
+	& a {
+		text-decoration: none;
+	}
+
 	& span {
+		@include text(14px,20px,400,$footer-text);
+		font-style: normal;
 		margin-left: 31px;
 	}
 }
 
 .page-footer__copyright-logo {
+	background-color: $bg-footer-icon;
+	border: 1px solid rgba($color: $bg-icon-border, $alpha: 0.1);
+
+	&:hover {
+		border: 1px solid rgba($color: $bg-icon-border, $alpha: 0.3);
+	}
+
+	&:active {
+		background-color:rgba($color: $bg-footer-icon, $alpha: 0.5);
+		border: 1px solid rgba($color: $bg-icon-border, $alpha: 0.1);
+
+		& a {
+			opacity: 0.5;
+		}
+	}
 
 	& a {
 		display: block;
 		width: 72px;
 		height: 68px;
-		outline: 2px solid red;
-
-		& img {
-			outline: 1px solid blue;
-		}
+		background: url("../../img/htmlacademy.png") no-repeat center;
 	}
 }
 

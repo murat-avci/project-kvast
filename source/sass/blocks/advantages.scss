@@ -1,10 +1,75 @@
-.advantages {
+.advantages__list {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	outline: 2px solid goldenrod;
+	grid-template-columns: 307px 402px 1fr;
 	justify-content: center;
 }
 
+.advantages__item {
+	position: relative;
+	width: 100%;
+
+	&::before {
+		position: absolute;
+		top: -89px;
+		left: 0;
+	}
+
+	&:first-child {
+		&::before {
+			content: url("../../img/icon-brew.png");
+		}
+	}
+
+	&:nth-child(2) {
+		padding-left: 95px;
+
+		&::before {
+			content: url("../../img/icon-matreshka.png");
+			left: 95px;
+		}
+
+		&::after {
+			position: absolute;
+			content: "";
+			left: 0;
+			bottom: 5px;
+			background-color: #e5b66c;
+			width: 1px;
+			height: 235px;
+		}
+	}
+
+	&:last-child {
+		padding-left: 94px;
+
+		.advantages__text {
+			padding-right: 0;
+		}
+
+		&::before {
+			content: url("../../img/icon-thumbsup.png");
+			left: 94px;
+		}
+
+		&::after {
+			position: absolute;
+			content: "";
+			left: 0;
+			bottom: 5px;
+			background-color: #e5b66c;
+			width: 1px;
+			height: 235px;
+		}
+	}
+}
+
+.advantages__title {
+	@include text(20px,30px,700,$basic-black);
+	text-transform: uppercase;
+}
+
 .advantages__text {
+	@include text(16px,30px,400,$main-text);
 	margin-top: 35px;
+	padding-right: 45px;
 }

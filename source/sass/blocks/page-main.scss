@@ -1,23 +1,22 @@
 .page-main__advantages {
-	padding: 80px 98px 96px 91px;
+	padding: 183px 30px 96px 91px;
+	background-color: $yellow-back;
 }
 
 .page-main__history {
 	padding: 95px 201px 86px 199px;
-	outline: 2px solid green;
 }
 
 .page-main__news {
 	padding: 95px 201px 90px 199px;
-	outline: 2px solid red;
+	background-color: $news-back;
 }
 
 .page-main__catalog {
 	padding: 105px 201px 90px 199px;
-	outline: 2px solid yellow;
 }
 
 .page-main__order {
 	padding: 95px 360px 110px 199px;
-	outline: 2px solid purple;
+	background-color: $yellow-back;
 }

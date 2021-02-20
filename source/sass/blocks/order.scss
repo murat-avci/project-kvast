@@ -1,7 +1,154 @@
+.order__title {
+	@include text(40px,61px,700,$basic-black);
+	text-transform: uppercase;
+}
+
 .order__text {
+	@include text(12px,30px,400,$main-text);
 	margin-top: 98px;
 }
 
 .order__form {
 	margin-top: 80px;
+}
+
+.order__item {
+	border: none;
+	padding-right: 31px;
+	padding-left: 0;
+	width: 100%;
+}
+
+.order__inner-wrapper {
+	margin-bottom: 28px;
+
+	&--tel {
+		display: flex;
+		width: 100%;
+	}
+
+	&--volume {
+		display: flex;
+		flex-direction: column;
+		margin-top: -50px;
+	}
+
+	&--comment {
+		display: flex;
+		flex-direction: column;
+		margin-top: -50px;
+	}
+}
+
+.order__inner-wrapper-tel {
+	&--add {
+		width: 50%;
+		margin-left: 50px;
+	}
+}
+
+.order__input {
+	width: 100%;
+	height: 50px;
+	margin-top: 12px;
+	border: none;
+	background-color: rgba($color: $basic-black, $alpha: 0.1);
+
+	&:hover {
+		background-color: rgba($color: $basic-black, $alpha: 0.15);
+	}
+
+	&:focus {
+		background-color: $basic-white;
+		color: $basic-black;
+	}
+}
+
+.order__label {
+	@include text(16px,20px,700,$basic-black);
+	text-transform: uppercase;
+}
+
+.order__select {
+	@include text(16px,20px,700,rgba($color: $basic-black,$alpha: 0.3));
+	text-transform: uppercase;
+	padding-left: 24px;
+	margin-top: 13px;
+	height: 52px;
+	border: none;
+	background-color: rgba($color: $basic-black, $alpha: 0.1);
+	appearance: none;
+	background-image: url("../../img/dropdown-icon.png");
+	background-repeat: no-repeat;
+	background-position: right 12px top 50%;
+
+	&:hover {
+		background-color: rgba($color: $basic-black, $alpha: 0.15);
+	}
+
+	&:focus {
+		background-color: $basic-white;
+		color: $basic-black;
+	}
+}
+
+.order__comment {
+	margin-top: 12px;
+	width: 100%;
+	min-height: 121px;
+	border: none;
+	background-color: rgba($color: $basic-black, $alpha: 0.1);
+
+	&:hover {
+		background-color: rgba($color: $basic-black, $alpha: 0.15);
+	}
+
+	&:focus {
+		background-color: $basic-white;
+		color: $basic-black;
+	}
+}
+
+.order__label {
+	margin-top: 48px;
+
+	&--check {
+		display: block;
+		position: relative;
+		margin-left: 54px;
+	}
+}
+
+.order__check + .order__label--check {
+	&::before {
+		position: absolute;
+		content: "";
+		bottom: 0;
+		left: -54px;
+		width: 36px;
+		height: 36px;
+		background-color: rgba($color: $basic-black, $alpha: 0.1);
+	}
+}
+
+.order__check:checked + .order__label--check {
+	&::before {
+		background-image: url("../../img/icon-tick.png");
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+}
+
+.order__check {
+	display: none;
+	margin: 0;
+}
+
+.order__btn {
+	@include text(16px,20px,700,$basic-white);
+	text-transform: uppercase;
+	background-color: $source-link;
+	border: none;
+	padding: 18px 22px 19px;
+	margin-top: 48px;
 }

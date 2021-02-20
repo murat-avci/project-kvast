@@ -13,11 +13,24 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	height: 58px;
+	border-top: 1px solid rgba($color: $basic-white, $alpha: 0.2);
+	border-bottom: 1px solid rgba($color: $basic-white, $alpha: 0.2);
 }
 
 .main-nav__link {
+	@include text(16px,16px,700,$basic-white);
 	display: inline-block;
 	padding-top: 22px;
 	padding-bottom: 20px;
 	margin: 0;
+	text-transform: uppercase;
+	text-decoration: none;
+
+	&:hover {
+		color: $link-hover;
+	}
+
+	&:active {
+		color: rgba($color: $link-hover, $alpha: 0.3);
+	}
 }

@@ -1,3 +1,8 @@
+.history__main-title {
+	@include text(40px,61px,700,$basic-black);
+	text-transform: uppercase;
+}
+
 .history__wrapper {
 	margin-top: 83px;
 }
@@ -7,4 +12,47 @@
 	grid-template-columns: 1fr 202px;
 	column-gap: 111px;
 	margin-bottom: 71px;
+
+	&:first-child {
+		.history__text {
+			margin-top: 32px;
+		}
+	}
+
+	&:last-child {
+		.history__text {
+			margin-top: 33px;
+		}
+	}
+}
+
+.history__title {
+	@include text(20px,30px,700,$basic-black);
+	text-transform: uppercase;
+}
+
+.history__text {
+	@include text(12px,30px,400,$main-text);
+}
+
+.history__inner-wrapper {
+	& cite {
+		@include text(12px,30px,400,$main-text);
+	}
+
+	& a {
+		color: $source-link;
+
+		&:hover {
+			color: $btn-hover;
+		}
+
+		&:active {
+			color: rgba($color: $btn-hover, $alpha: 0.3);
+		}
+	}
+
+	& img {
+		margin-top: 40px
+	}
 }

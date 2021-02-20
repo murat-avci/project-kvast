@@ -1,0 +1,26 @@
+
+	.table {
+		@include text(16px,41px,900,$basic-black);
+		font-style: normal;
+		text-transform: uppercase;
+		border-collapse: collapse;
+		border: 1px solid #e5e5e5;
+		text-align: left;
+	}
+
+	.table__item {
+		height: 40px;
+	}
+
+	.table__row-head {
+		width: 77px;
+		padding-left: 10px;
+		border: 1px solid #e5e5e5;
+	}
+
+	.table__row {
+		width: 70px;
+		padding-left: 10px;
+		border: 1px solid #e5e5e5;
+	}
+

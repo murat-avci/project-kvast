@@ -2,11 +2,51 @@
 	display: grid;
 	grid-template-columns: 140px 1fr;
 	column-gap: 131px;
-	outline: 2px solid red;
 	align-items: center;
+}
+
+.footer-nav__wrapper {
+	position: relative;
+
+	&::before,
+	&::after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 1px;
+		background-color: rgba($color: $bg-icon-border, $alpha: 0.2);
+	}
+
+	&::before {
+		top: 0;
+	}
+
+	&::after {
+		bottom: 0;
+	}
 }
 
 .footer-nav__menu {
 	display: flex;
 	justify-content: space-between;
+}
+
+.footer-nav__item {
+	margin-top: 23px;
+	margin-bottom: 19px;
+}
+
+.footer-nav__link {
+	display: block;
+	@include text(16px,16px, bold, $basic-white);
+	text-transform: uppercase;
+	text-decoration: none;
+
+	&:hover {
+		color: $link-hover;
+	}
+
+	&:active {
+		color: rgba($color: $link-hover, $alpha: 0.3);
+	}
 }
