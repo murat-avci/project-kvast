@@ -137,7 +137,7 @@ const html = () => {
 
 exports.html = html;
 
-JS
+// JS
 
 const js = () => {
   return gulp.src("source/js/index.js")
