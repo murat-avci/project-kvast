@@ -1,0 +1,146 @@
+.card {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	position: relative;
+	// border-left: 1px solid gray;
+	// border-right: 1px solid gray;
+
+	// &::before,
+	// &::after {
+	// 	position: absolute;
+	// 	content: "";
+	// 	background-color: gray;
+	// 	top: 0;
+	// 	bottom: 0;
+	// 	width: 1px;
+	// 	height: 100%;
+	// }
+
+	// &::before {
+	// 	left: 0;
+	// }
+
+	// &::after {
+	// 	left: 50%;
+	// }
+}
+
+.card__item {
+	position: relative;
+	padding: 9px 32px 0 34px;
+
+	&::before,
+	&::after {
+		position: absolute;
+		content: "";
+		background-color: $bg-header;
+		top: 0;
+		bottom: 0;
+		width: 1px;
+		height: 100%;
+	}
+
+	&::before {
+		left: 0;
+	}
+
+	&::after {
+		right: 0;
+	}
+
+	&:nth-child(2n) {
+		&::before {
+			left: -1px;
+		}
+	}
+}
+
+.card__title {
+	@include text(40px,61px,700,$basic-black);
+	text-transform: uppercase;
+}
+
+.card__inner-wrapper {
+	position: absolute;
+	width: 149px;
+	top: 85px;
+	right: 25px;
+}
+
+.card__properties {
+	@include text(14px,20px,700,$basic-black);
+	text-transform: uppercase;
+	width: 149px;
+	border-collapse: collapse;
+	border: 1px solid rgba($color: $basic-black, $alpha: 0.2);
+
+	& td {
+		padding: 10px 20px 10px 10px;
+		border: 1px solid $bg-header;
+	}
+}
+
+.card__pic {
+	margin-top: 22px;
+}
+
+.card__ingredients {
+	@include text(14px,24px,400,$main-text);
+	margin-top: 16px;
+}
+
+.card__description {
+	@include text(16px,30px,400,$main-text);
+	margin-top: 18px;
+}
+
+.card__order {
+	margin-top: 66px;
+	margin-bottom: 0;
+}
+
+.card__btn {
+	display: inline-block;
+
+	@include text(14px,15px,700,$basic-black);
+	letter-spacing: -0.01px;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 2px solid $source-link;
+
+	&--more-info {
+		color: $source-link;
+		padding: 18px 22px 17px 23px;
+
+		&:hover {
+			color: $btn-hover;
+			border-color: $btn-hover;
+		}
+
+		&:active {
+			color: rgba($color: $btn-hover, $alpha: 0.3);
+			border-color: rgba($color: $btn-hover, $alpha: 0.3);
+		}
+	}
+
+	&--buy {
+		color: $basic-white;
+		background-color: $source-link;
+		padding: 18px 23px 17px;
+		margin-left: 6px;
+
+		&:hover {
+			background-color: $btn-hover;
+		}
+
+		&:active {
+			color: rgba($color: $basic-white, $alpha: 0.3);
+			background-color: $btn-hover;
+		}
+	}
+}
+
+.card__price {
+	@include text(16px,20px,700,$basic-black);
+	margin-left: 25px;
+}

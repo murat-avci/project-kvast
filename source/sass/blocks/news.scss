@@ -1,12 +1,22 @@
 .news__title {
 	@include text(40px,61px,700,$basic-black);
+	text-transform: uppercase;
 }
 
-.news__text {
+.news__content {
 	@include text(16px,30px,400,$main-text);
-	margin-top: 99px;
-	// padding-right: 106px;
-	width: 692px;
+	position: relative;
+	width: 690px;
+	margin-top: 83px;
+
+	&::before {
+		position: absolute;
+		content: url("../../img/quotes.png");
+		top: 5px;
+		left: -105px;
+		width: 41px;
+		height: 31px;
+	}
 }
 
 .news__inner-wrapper {
@@ -16,24 +26,25 @@
 	margin-top: 44px;
 }
 
-.news__link {
-	@include text(16px,20px,700,rgba($color: $basic-black, $alpha: 0.3));
-	display: block;
-	padding: 17px 22px 18px 24px;
+.news__btn {
+	display: inline-block;
+
+	@include text(16px,20px,700,rgba($color: $basic-black,$alpha: 0.3));
 	text-transform: uppercase;
 	text-decoration: none;
+	padding: 15px 23px;
 	border: 2px solid rgba($color: $basic-black, $alpha: 0.3);
 
 	&:hover {
 		color: $basic-white;
-		background-color: $ghost-btn-hover;
-		border-color: $ghost-btn-hover;
+		background-color: $news-btn-hover;
+		border-color: $news-btn-hover;
 	}
 
 	&:active {
 		color: rgba($color: $basic-white, $alpha: 0.3);
-		background-color: $ghost-btn-active;
-		border-color: $ghost-btn-active;
+		background-color: $news-btn-active;
+		border-color: $news-btn-active;
 	}
 }
 

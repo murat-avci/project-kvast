@@ -1,27 +1,30 @@
-.catalog__title {
+.goods__title {
 	@include text(40px,61px,700,$basic-black);
 	text-transform: uppercase;
 }
 
-.catalog__table {
-	margin-top: 103px;
+.goods__table {
+	margin-top: 76px;
 	width: 800px;
 	text-align: left;
 	border-collapse: collapse;
 }
 
-.catalog__item {
+.goods__item {
 	height: 64px;
 	border-bottom: 1px solid rgba($color: $basic-black, $alpha: 0.2);
 }
 
-.catalog__col-title {
+.goods__col-title {
 	@include text(11px,30px,400,#999999);
 	text-transform: uppercase;
-	// text-align: left
+
+	&:last-child {
+		text-align: right;
+	}
 }
 
-.catalog__row-title {
+.goods__row-title {
 	@include text(16px,30px,700,$basic-black);
 	text-transform: uppercase;
 	width: 403px;
@@ -37,24 +40,27 @@
 	}
 }
 
-.catalog__row-item {
+.goods__row-item {
 	@include text(16px,30px,400,$main-text);
 	text-transform: uppercase;
-	// text-align: left;
+
+	&:last-child {
+		text-align: right;
+	}
 }
 
-.catalog__col1 {
+.goods__col1 {
 	width: 91px;
 }
 
-.catalog__col2 {
+.goods__col2 {
 	width: 63px;
 }
 
-.catalog__col3 {
+.goods__col3 {
 	width: 201px;
 }
 
-.catalog__col4 {
+.goods__col4 {
 	text-align: right;
 }

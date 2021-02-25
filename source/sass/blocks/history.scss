@@ -1,58 +1,59 @@
-.history__main-title {
+.history__title {
 	@include text(40px,61px,700,$basic-black);
 	text-transform: uppercase;
 }
 
 .history__wrapper {
-	margin-top: 83px;
+	margin-top: 62px;
 }
 
 .history__item {
 	display: grid;
 	grid-template-columns: 1fr 202px;
 	column-gap: 111px;
-	margin-bottom: 71px;
+	margin-bottom: 52px;
+}
 
-	&:first-child {
-		.history__text {
-			margin-top: 32px;
-		}
+.history__inner-wrapper {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+.history__part {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+.history__source {
+	@include text(16px,30px,400,$main-text);
+}
+
+.history__link {
+	color: $source-link;
+
+	&:hover {
+		color: $btn-hover;
 	}
 
-	&:last-child {
-		.history__text {
-			margin-top: 33px;
-		}
+	&:active {
+		color: $btn-active;
 	}
 }
 
-.history__title {
+.history__pic {
+	margin-top: 35px;
+}
+
+.history__subtitle {
 	@include text(20px,30px,700,$basic-black);
 	text-transform: uppercase;
 }
 
 .history__text {
-	@include text(12px,30px,400,$main-text);
-}
-
-.history__inner-wrapper {
-	& cite {
-		@include text(12px,30px,400,$main-text);
-	}
-
-	& a {
-		color: $source-link;
-
-		&:hover {
-			color: $btn-hover;
-		}
-
-		&:active {
-			color: rgba($color: $btn-hover, $alpha: 0.3);
-		}
-	}
-
-	& img {
-		margin-top: 40px
-	}
+	@include text(16px,30px,400,$main-text);
+	margin-top: 32px;
 }

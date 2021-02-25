@@ -2,35 +2,36 @@
 	display: grid;
 	grid-template-columns: 140px 1fr;
 	column-gap: 61px;
+	align-items: center;
 }
 
 .main-nav__wrapper {
-	padding-top: 10px;
-}
-
-.main-nav__menu {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	height: 58px;
+	// padding: 22px 10px 20px;
 	border-top: 1px solid rgba($color: $basic-white, $alpha: 0.2);
 	border-bottom: 1px solid rgba($color: $basic-white, $alpha: 0.2);
 }
 
+.main-nav__list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .main-nav__link {
-	@include text(16px,16px,700,$basic-white);
 	display: inline-block;
-	padding-top: 22px;
-	padding-bottom: 20px;
-	margin: 0;
+	position: relative;
+	padding: 22px 10px 20px;
+
+	@include text(16px,16px,700,$basic-white);
 	text-transform: uppercase;
 	text-decoration: none;
 
 	&:hover {
-		color: $link-hover;
+		color: $yellow-back;
+		background-color: rgba($color: $basic-black, $alpha: 0.1);
 	}
 
 	&:active {
-		color: rgba($color: $link-hover, $alpha: 0.3);
+		color: rgba($color: $yellow-back, $alpha: 0.3);
 	}
 }
