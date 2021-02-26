@@ -93,7 +93,7 @@ const copy = () => {
     "source/css/*.css",
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
+    // "source/js/**",
     "source/*.ico"
   ], {
     base: "source"
@@ -118,8 +118,8 @@ const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html"));
   gulp.watch("source/img/*.*", gulp.series("images"));
-  gulp.watch("source/js/*.js", gulp.series("copy"));
-  gulp.watch("source/js/*.js").on("change", sync.reload);
+  // gulp.watch("source/js/*.js", gulp.series("copy"));
+  // gulp.watch("source/js/*.js").on("change", sync.reload);
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
@@ -139,18 +139,18 @@ exports.html = html;
 
 // JS
 
-const js = () => {
-  return gulp.src("source/js/index.js")
-    .pipe(plumber())
-    .pipe(gulp.dest("build/js/"))
-    .pipe(sync.stream());
-};
+// const js = () => {
+//   return gulp.src("source/js/index.js")
+//     .pipe(plumber())
+//     .pipe(gulp.dest("build/js/"))
+//     .pipe(sync.stream());
+// };
 
-exports.js = js;
+// exports.js = js;
 
 // Build
 
-gulp.task("build", gulp.series(clean, copy, styles, images, webpImages, sprite, js, html));
+gulp.task("build", gulp.series(clean, copy, styles, images, webpImages, sprite, html));
 
 // Gulp start
 
