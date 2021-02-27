@@ -1,7 +1,7 @@
 {
   "name": "kvast",
   "private": true,
-  "description": "Кексби. Финальное испытание",
+  "description": "Кексби-Финальное испытание",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "^9.8.6",
